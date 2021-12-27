@@ -31,6 +31,16 @@ h1{
     margin: 0px;
     padding: 0px;
     list-style-type: none;
+    
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+
+}
+.menu li{
+    
+    margin-top: 40px;
 }
 
 
@@ -242,6 +252,23 @@ color: #192b59;
     display: flex;
 }
 
+.fact{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.fact span{
+    padding-bottom: 40px;
+    order: 1;
+
+}
+
+.fact li{
+    display: flex;
+    flex-direction: column;
+
+}
 
 .page-app h2{
     font-size: 50px;
