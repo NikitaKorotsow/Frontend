@@ -19,7 +19,11 @@ a{
 h1{
     font-size: 80px;
     font-weight: 600;
-    color: #192b59
+    color: #192b59;
+    max-width: 540px;
+    letter-spacing: -2.5px;
+    line-height: 1.1;
+    margin-bottom: 65px;
 }
 
 
@@ -31,16 +35,19 @@ h1{
     margin: 0px;
     padding: 0px;
     list-style-type: none;
-    
-}
-.menu{
     display: flex;
-    justify-content: space-around;
 
 }
-.menu li{
-    
-    margin-top: 40px;
+.menu>li {
+    padding: 0 15px;
+    margin-top: 57px;
+    margin-left: 8px;
+}
+
+
+.wrap {
+    max-width: 1110px;
+    margin: 0 auto;
 }
 
 
@@ -127,6 +134,10 @@ h1{
     padding: 17px 53px;
     color: #fff;
     background-color: #1085e4;
+}
+
+.page-company{
+    list-style-type: none;
 }
 
 .grid h2{
@@ -227,47 +238,61 @@ color: #192b59;
     font-weight: 700;
 }
 
+.page-stat{
+    background-color: #edf6ff;
+    padding: 115px 0px 95px 0px;
+}
 
 
-.page-stat h2{
-    color: #192b59;
+.title-h2{
     font-size: 50px;
     font-weight: 600;
+    color: #192b59;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
 }
 
-
-.page-stat span{
-    display: flex;
-    color: #1085e4;
-    text-transform: uppercase;
+.title-h2 span{
+    display:block;
     font-size: 16px;
     font-weight: 800;
+    color: #1085e4;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
-
-.page-stat li{
-    color:#bacbdc;
-    font-size: 50px;
-    font-weight: 800;
-    display: flex;
+.page-stat .title-h2 {
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .fact{
     display: flex;
     justify-content: space-around;
+    list-style-type: none;
 
 }
 
-.fact span{
-    padding-bottom: 40px;
-    order: 1;
+
+.fact>li{
+    font-size: 12px;
+    font-weight: 700;
+    color: #1085e4;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
 
 }
 
-.fact li{
-    display: flex;
-    flex-direction: column;
-
+.fact>li>span{
+    display: block;
+    font-size: 60px;
+    font-weight: 700;
+    color: #bacbdc;
+    margin-bottom: 20px;
+    letter-spacing: 0px;
 }
 
 .page-app h2{
@@ -315,21 +340,39 @@ color: #192b59;
 }
 
 
-.page-screen h2{
-    font-size: 50px;
-    font-weight: 600;
+.page-screen .title-h2{
+    font-size: 40px;
+    letter-spacing: -1.1px;
     color: #192b59;
 }
 
+.page-screen{
+    background-color: #edf6ff;
+    padding: 80px 0 0 0;
+    text-align: center;
+}
+
+.screen{
+    margin-top: 40px;
+    margin-bottom: -10px;
+}
 
 .page-screen span{
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 800;
     color: #1085e4;
-    display: flex;
+    display: block;
+    margin-bottom: 15px;
+    letter-spacing: 1.5px;
+
 }
 
+.page-screen .title-h2 span{
+    font-size: 18px;
+    margin-bottom: 20px;
+    letter-spacing: 3.5px;
+}
 
 .page-clients h2{
     font-size: 40px;
@@ -359,6 +402,50 @@ color: #192b59;
     text-transform: uppercase;
 }
 
+.page-plan{
+    text-align: center;
+}
+
+.title-h2-40 span{
+    color: #1085e4;
+    display: block;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+}
+
+.box-price-item ul{
+    padding-left: 0px;
+    margin-top: 34px;
+    margin-bottom: 60px;
+    font-size: 14px;
+}
+
+.box-price-item ul>li{
+    margin-bottom: 14px;
+}
+
+.box-price-item::after{
+    content: "";
+    width: 58px;
+    height: 100%;
+    background-image: url(../image/bg-plans.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.box-price-item.active::after{
+    display: none;
+}
+
+.box-price{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+}
 
 .page-plan h2{
     font-size: 40px;
@@ -367,34 +454,68 @@ color: #192b59;
 }
 
 
-.page-plan span{
-    font-size: 18px;
+.box-price-item span{
+    font-size: 20px;
     font-weight: 800;
     color: #1085e4;
     text-transform: uppercase;
 }
 
 
-.page-plan h3{
-    font-size: 80px;
+.box-price-item h3{
+    font-size: 70px;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+    margin-top: 0px;
     font-weight: 600;
     color: #192b59;
 }
-.page-plan p{
+.box-price-item p{
     font-size: 12px;
     font-weight: 700;
     color: #1085e4;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.box-price-item h3 span:first-child{
+    color: #192b59;
+}
+
+.box-price-item.active h3 span:first-child{
+    color: #fff;
+}
+
+.box-price-item.active h3{
+    color: #fff;
+}
+
+.box-price-item.active span:last-child{
+    color: #7b8ab2;
+}
+
+.box-price-item.active {
+    background-color: #192b59;
+    color: #fff;
 }
 
 .page-plan ul{
     font-size: 14px;
     font-weight: 400;
+    list-style-type: none;
 }
 
 .box-price-item span{
     color: #7b8ab2;
     font-weight: 700;
     font-size: 14px;
+}
+
+.box-price-item{
+    background-color: #f5faff;
+    flex-basis: 32%;
+    padding: 90px 0 96px 0;
+    position: relative;
 }
 
 
